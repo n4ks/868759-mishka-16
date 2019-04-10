@@ -3,17 +3,21 @@
 
 <head>
   <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="format-detection" content="telephone=no">
+  <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/style.css">
   <title>HTML Academy: Мишка</title>
 </head>
 
 <body>
   <header class="page-header container">
+    <a class="page-header__logo logo">
+      <img class="page-header__logo-img logo__img" src="img/logo-mobile.svg" width="86" height="35"
+        alt="Интернет-магазин «Mishka»">
+    </a>
     <nav class="main-nav">
-      <a class="main-nav__logo logo">
-        <img class="logo__img" src="img/logo-mobile.svg" width="86" height="35" alt="Интернет-магазин «Mishka»">
-      </a>
-      <!-- <ul class="main-nav__list site-list">
+      <ul class="main-nav__list site-list">
         <li class="site-list__item">
           <a class="site-list__link" href="catalog.html">Каталог товаров</a>
         </li>
@@ -26,7 +30,7 @@
         <li class="site-list__item">
           <a class="site-list__link site-list__link--style--2" href="basket.html">Корзина: пока пуста</a>
         </li>
-      </ul> -->
+      </ul>
     </nav>
   </header>
   <main class="page-main">
@@ -110,11 +114,11 @@
     <section class="contacts">
       <h2 class="contacts__title page-title page-title--size--md">Контакты</h2>
       <div class="contacts__row">
-        <p>e-mail:</p>
+        <p class="contacts__text">e-mail:</p>
         <a class="contacts__email-adress" href="mailto:info@mimimishkashop.ru">info@mimimishkashop.ru</a>
       </div>
       <div class="contacts__row">
-        <p>адрес:</p>
+        <p class="contacts__text">адрес:</p>
         <address>
           г. Санкт-Петербург, ул. Большая Конюшенная, д. 19/8, офис 101
         </address>
@@ -125,23 +129,17 @@
     </section>
   </main>
   <footer class="page-footer">
-    <ul class="page-footer__socials-list socials-list">
-      <li class="socials-list__item">
-        <a class="socials-list__link social-link social-link--inst" href="#">
-          <span class="visually-hidden">Инстаграм</span>
-        </a>
-      </li>
-      <li class="socials-list__item">
-        <a class="socials-list__link social-link social-link--fb" href="#">
-          <span class="visually-hidden">Фейсбук</span>
-        </a>
-      </li>
-      <li class="socials-list__item">
-        <a class="socials-list__link social-link social-link--tw" href="#">
-          <span class="visually-hidden">Твиттер</span>
-        </a>
-      </li>
-    </ul>
+      <ul class="page-footer__socials-list socials-list">
+          <li class="socials-list__item">
+            <a class="socials-list__link social-link social-link--inst" href="#">Инстаграм</a>
+          </li>
+          <li class="socials-list__item">
+            <a class="socials-list__link social-link social-link--fb" href="#">Фейсбук</a>
+          </li>
+          <li class="socials-list__item">
+            <a class="socials-list__link social-link social-link--tw" href="#">Твиттер</a>
+          </li>
+        </ul>
     <div class="page-footer-copyright copyright">
       <b class="copyright__text">Разработано</b>
       <a class="copyright__link" href="https://htmlacademy.ru">HTML Academy</a>
