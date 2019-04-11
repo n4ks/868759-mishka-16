@@ -7,18 +7,49 @@
   margin-bottom: 42px;
 }
 
-.contacts__row:last-of-type {
-  margin-bottom: 42px;
-}
+.contacts__row {
+  line-height: 30px;
 
-.contacts__email-adress {
-  color: @grey-brown;
+  &:last-of-type {
+    margin-bottom: 42px;
+  }
 }
 
 .contacts__text {
   margin: 0;
 
   line-height: 30px;
+}
+
+.contacts__email {
+  position: relative;
+  color: @grey-brown;
+
+  &:hover,
+  &:focus {
+    color: @cyan;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+
+    bottom: -5px;
+    left: 0;
+
+    width: 100%;
+    height: 1px;
+
+    background-color: #62d2bc;
+  }
+
+  &:active::after {
+    width: 88%;
+  }
 }
 
 .contacts__map {
