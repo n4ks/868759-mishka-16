@@ -1,32 +1,67 @@
 .promo {
+  // width: 320px;
+  margin: 0 auto;
   background-color: #f1f1f1;
 
   &--toys {
-    padding-top: 75px;
+    padding-top: 71px;
 
+    background-color: #ffffff;
     background-image: url("/img/hero-mobile@1x.jpg");
-    background-position: -128px -18px;
+    background-position: center -18px;
     background-repeat: no-repeat;
 
-    // пройдёт по вложенности?
     .promo__title {
-      margin-bottom: 120px;
+      margin-bottom: 122px;
+      padding: 0 36px;
+      text-align: center;
     }
   }
 }
 
+.promo__container {
+  width: 320px;
+  margin: 0 auto;
+}
+
 .promo__button {
+  position: relative;
+
   display: block;
 
-  padding: 30px 0 30px 0;
+  padding: 26px 90px 29px 28px;
 
   font-size: 19px;
   font-weight: 700;
   color: #ffffff;
 
   &--style--1 {
-    background-color: #63d1bb;
+    background-color: @seafoam-blue;
+
+    .promo__icon {
+      top: 23px;
+      right: 36px;
+    }
   }
+
+  &:hover,
+  &:focus {
+    .promo__icon {
+      opacity: 0.7;
+    }
+  }
+
+  &:active {
+    .promo__icon {
+      opacity: 0.3;
+    }
+  }
+
+  &--style--1:hover,
+  &--style--1:focus {
+    background-color: #59d5bc;
+  }
+
 
   &--style--1:active {
     color: @button-font-active;
@@ -34,11 +69,127 @@
   }
 
   &--style--2 {
-    background-color: #56c3b2;
+    background-color: @aqua-marine;
+
+    .promo__icon {
+      top: 20px;
+      right: 26px;
+    }
+  }
+
+  &--style--2:hover,
+  &--style--2:focus {
+    background-color: @greeny-blue;
   }
 
   &--style--2:active {
     color: @button-font-active;
-    background-color: #46c1ae;
+    background-color: @greeny-blue;
+  }
+}
+
+.promo__button .promo__icon {
+  position: absolute;
+  opacity: 0.5;
+
+  path {
+    fill: #149080;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .promo {
+    &--toys {
+      position: relative;
+      padding-top: 154px;
+
+      background-image: url("/img/hero-tablet@1x.jpg");
+      background-repeat: no-repeat;
+      background-position: center;
+
+      .promo__title {
+        margin-bottom: 373px;
+
+        font-size: 43px;
+        line-height: 50px;
+
+        br {
+          display: none;
+        }
+      }
+
+      .promo__button {
+        &--style--1 {
+          .promo__icon {
+            top: 30px;
+            right: 36px;
+          }
+        }
+
+        &--style--2 {
+          .promo__icon {
+            top: 32px;
+            right: 34px;
+          }
+        }
+      }
+
+      &::after {
+        content: "";
+
+        position: absolute;
+        bottom: -20px;
+        left: 0;
+
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='1150' height='34'%3E%3Cpath fill='%23FFF' d='M1121.252 0c-14.375 0-14.375 14-28.749 14s-14.374-14-28.748-14-14.374 14-28.748 14c-14.375 0-14.375-14-28.75-14-14.374 0-14.374 14-28.748 14S963.135 0 948.761 0s-14.374 14-28.749 14-14.375-14-28.749-14-14.374 14-28.749 14-14.375-14-28.75-14c-14.371 0-14.371 14-28.743 14-14.375 0-14.375-14-28.75-14-14.372 0-14.372 14-28.744 14-14.374 0-14.374-14-28.747-14s-14.373 14-28.747 14C675.66 14 675.66 0 661.287 0c-14.374 0-14.374 14-28.748 14-14.375 0-14.375-14-28.751-14-14.374 0-14.374 14-28.748 14S560.666 0 546.292 0s-14.374 14-28.748 14S503.17 0 488.796 0c-14.375 0-14.375 14-28.75 14-14.376 0-14.376-14-28.753-14-14.375 0-14.375 14-28.75 14S388.168 0 373.792 0c-14.375 0-14.375 14-28.75 14S330.666 0 316.291 0s-14.375 14-28.751 14c-14.376 0-14.376-14-28.753-14-14.374 0-14.374 14-28.747 14-14.375 0-14.375-14-28.75-14s-14.375 14-28.751 14c-14.377 0-14.377-14-28.754-14s-14.377 14-28.755 14c-14.378 0-14.378-14-28.756-14S71.896 14 57.518 14C43.139 14 43.139 0 28.759 0S14.38 14 0 14v20h1150V14c-14.374 0-14.374-14-28.748-14z'/%3E%3C/svg%3E");
+        background-repeat: repeat;
+        background-position: 0 0;
+
+        width: 100%;
+        height: 34px;
+      }
+    }
+  }
+
+  .promo__container {
+    width: 668px;
+  }
+
+  .promo__wrapper {
+    display: flex;
+  }
+
+  .promo__button {
+    padding: 28px 90px 29px 36px;
+    width: 334px;
+    box-sizing: border-box;
+
+    font-size: 20px;
+    line-height: 30px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .promo {
+    &--toys {
+      background-image: url("/img/hero-desktop@1x.jpg");
+
+      .promo__title {
+        padding: 0 216px;
+
+        font-size: 53px;
+        line-height: 57px;
+
+        margin-bottom: 359px;
+      }
+
+      .promo__container {
+        width: 1050px;
+      }
+
+      .promo__button {
+        width: 525px;
+      }
+    }
   }
 }
