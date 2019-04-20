@@ -1,10 +1,61 @@
-.page-header__logo {
-  display: block;
-  height: 79px;
-}
-
 @media (min-width: @tablet-width) {
   .page-header {
-    display: flex;
+    position: relative;
+
+    box-shadow: 0 1px 0 0 #ececec;
+
+    .site-list {
+      position: absolute;
+      top: 106px;
+      left: 2px;
+      font-size: 15px;
+
+      z-index: 1;
+    }
+
+    .site-list__item:not(:last-child) {
+      margin-right: 37px;
+    }
+
+    .main-nav__text {
+      position: absolute;
+      right: 2px;
+      bottom: -42px;
+
+      margin: 0;
+
+      z-index: 1;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-header {
+    .site-list {
+      position: static;
+      font-size: 17px;
+    }
+
+    .site-list__item:not(:last-child) {
+      margin-right: 0;
+    }
+
+    .offer-list {
+      position: absolute;
+      left: 0;
+      bottom: -42px;
+
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+
+      width: 350px;
+
+      z-index: 1;
+    }
+
+    .offer-list__item:not(:last-child) {
+      margin-right: 60px;
+    }
   }
 }
