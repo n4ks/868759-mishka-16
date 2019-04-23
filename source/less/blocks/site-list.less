@@ -7,12 +7,13 @@
 
 
 .site-list__item {
-  box-shadow: 0 1px 0 0 #ececec;
+  margin: 0 -30px;
+  border-bottom: 1px solid @grey;
 }
 
 .site-list__link {
   display: block;
-  padding: 27px 10px 28px 76px;
+  padding: 27px 10px 27px 75px;
 
   color: #000000;
 
@@ -31,11 +32,11 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
-    width: 420px;
   }
 
   .site-list__item {
-    box-shadow: none;
+    margin: 0;
+    border-bottom: 0;
   }
 
   .site-list__link {
@@ -44,51 +45,16 @@
 }
 
 @media (min-width: @desktop-width) {
-  .site-list {
-    width: 390px;
-  }
-
   .site-list__link {
-    padding: 32px 0;
+    padding: 32px 35px;
+
+    &--no-left-offset {
+      padding-left: 0;
+    }
   }
 
-  // дичь
-  .site-list__item:nth-child(1n) > .site-list__link {
-    padding-right: 35px;
-    box-shadow: 1px 0 0 0 #ececec;
-  }
-
-  .site-list__item:nth-child(2n) > .site-list__link {
-    padding-right: 0;
-    padding-left: 35px;
-    box-shadow: none;
+  .site-list__item + .site-list__item {
+    border-left: 1px solid @grey;
   }
 }
 
-// @media (min-width: @tablet-width) {
-//   .site-list {
-//     display: flex;
-//     flex-wrap: wrap;
-//     justify-content: flex-start;
-//     width: 345px;
-
-//     font-size: 15px;
-//   }
-
-//   .site-list__item {
-//     &:not(:last-child) {
-//       margin-right: 38px;
-//     }
-//     box-shadow: none;
-//   }
-
-//   .site-list__link {
-//     padding: 0;
-//   }
-// }
-
-// @media (min-width: @desktop-width) {
-//   .site-list {
-//     width: 380px;
-//   }
-// }

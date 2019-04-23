@@ -1,31 +1,10 @@
 .reviews {
+  .container();
+
   position: relative;
 
   padding-top: 54px;
-  padding-bottom: 50px;
-
-  &::after {
-    content: "";
-
-    position: absolute;
-    bottom: 0;
-    left: 0;
-
-    background-image: url("../img/bg-zigzag-line.svg");
-    background-repeat: no-repeat;
-    background-position: bottom center;
-
-    width: 100%;
-    height: 23px;
-
-    background-size: 100%;
-  }
-}
-
-.reviews__container {
-  position: relative;
-  width: 260px;
-  margin: 0 auto;
+  padding-bottom: 44px;
 }
 
 .reviews__title {
@@ -73,16 +52,12 @@
 
 @media (min-width: @tablet-width) {
   .reviews {
-    padding-top: 161px;
-    padding-bottom: 95px;
+    padding-top: 77px;
+    padding-bottom: 82px;
     background-image: url("../img/review@1x.jpg");
     background-repeat: no-repeat;
-    background-position: 0 83px;
+    background-position: top left;
     background-size: 350px 457px;
-  }
-
-  .reviews__container {
-    width: 668px;
   }
 
   .reviews__title {
@@ -106,10 +81,12 @@
 
   .reviews__button {
     position: absolute;
-    top: 0;
-    right: 0;
+    top: 79px;
+    right: 50px;
 
     width: 175px;
+
+    font-size: 17px;
   }
 
   .reviews__slider {
@@ -131,15 +108,11 @@
 
 @media (min-width: @desktop-width) {
   .reviews {
-    padding-bottom: 150px;
+    padding-top: 71px;
+    padding-left: 224px;
+    padding-bottom: 130px;
 
-    background-position: 50px 91px;
-  }
-
-  .reviews__container {
-    padding-left: 175px;
-
-    width: 875px;
+    background-position: top left 50px;
   }
 
   .reviews__title {
@@ -162,6 +135,6 @@
   }
 
   .reviews__button {
-    top: 8px;
+    top: 79px;
   }
 }
