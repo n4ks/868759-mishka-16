@@ -104,9 +104,15 @@
 
 @media (min-width: @tablet-width) {
   .promo {
+    padding-top: 95px;
+    padding-bottom: 78px;
+    margin-bottom: 81px;
+
     &--toys {
       position: relative;
       padding-top: 154px;
+      padding-bottom: 0;
+      margin-bottom: 0;
 
       background-color: #ffffff;
       background-image: url("/img/hero-tablet@1x.jpg");
@@ -174,15 +180,17 @@
 }
 
 @media (min-width: @desktop-width) {
+  .promo {
+    margin-bottom: 152px;
+  }
+
   .promo--toys {
+    margin-bottom: 0;
+
     background-image: url("/img/hero-desktop@1x.jpg");
 
     .promo__title {
       padding: 0 216px;
-
-      font-size: 53px;
-      line-height: 57px;
-
       margin-bottom: 359px;
     }
   }
