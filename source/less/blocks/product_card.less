@@ -2,6 +2,12 @@
   padding-bottom: 27px;
 
   border: @border-grey;
+
+  &:hover {
+    .product-card__container {
+      box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1);
+    }
+  }
 }
 
 .product-card__container {
@@ -10,26 +16,39 @@
 
 .product-card__link-img {
   display: block;
-  margin-bottom: 21px;
+  margin-bottom: 27px;
+}
+
+.product-card__link-img:active+.product-card__container {
+  box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.1);
 }
 
 .product-card__img {
   display: block;
 }
 
-.product-card__title {
+.product-card__wrapper {
+  margin-bottom: 19px;
+}
+
+.product-card__link {
+  display: block;
   margin-bottom: 5px;
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .product-card__description {
-  padding-bottom: 19px;
   margin: 0;
-  margin-bottom: 21px;
 
   font-size: 13px;
   line-height: 30px;
-
-  border-bottom: @border-grey;
 }
 
 .product-card__price {
@@ -41,13 +60,39 @@
 .product-card__wrapper-price {
   display: flex;
   justify-content: space-between;
+
+  padding-top: 21px;
+
+  border-top: @border-grey;
 }
 
 .product-card__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   width: 20px;
   height: 19px;
   border: none;
-  background-color: red;
+  background-color: transparent;
+
+  cursor: pointer;
+}
+
+.product-card__icon {
+  flex-shrink: 0;
+
+  opacity: 0.2;
+}
+
+.product-card__button:hover .product-card__icon,
+.product-card__button:focus .product-card__icon {
+  fill: @seafoam-blue;
+  opacity: 1;
+}
+
+.product-card__button:active .product-card__icon {
+  opacity: 0.3;
 }
 
 @media (min-width: @tablet-width) {
@@ -55,11 +100,11 @@
     display: flex;
 
     padding-bottom: 0;
-    margin-bottom: 52px;
   }
 
   .product-card__wrapper {
     padding-right: 40px;
+    margin: 0;
   }
 
   .product-card__container {
@@ -77,8 +122,6 @@
   }
 
   .product-card__description {
-    margin: 0;
-    padding: 0;
     font-size: 15px;
 
     border: none;
@@ -98,14 +141,23 @@
 
 @media (min-width: @desktop-width) {
   .product-card {
-    display: list-item;
+    flex-direction: column;
+    width: 30%;
   }
 
   .product-card__container {
-    display: block;
+    padding-top: 26px;
+    padding-bottom: 25px;
   }
 
   .product-card__wrapper {
-    padding-right: 0;
+    padding-right: 20px;
+    margin-bottom: 15px;
+  }
+
+
+  .product-card__wrapper-price {
+    padding-top: 22px;
+    margin-left: 0;
   }
 }

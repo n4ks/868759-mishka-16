@@ -1,0 +1,51 @@
+.fieldset {
+  position: relative;
+
+  padding: 0;
+  margin: 0;
+
+  border: none;
+
+  overflow: hidden;
+}
+
+.fieldset legend {
+  font-size: 17px;
+  line-height: 16px;
+  font-weight: 700;
+
+  color: @seafoam-blue;
+
+  text-transform: uppercase;
+}
+
+.fieldset::after {
+  content: "";
+  position: absolute;
+
+  top: 7px;
+  left: 62px;
+
+  width: 100%;
+  height: 1px;
+
+  background-color: #62d1da;
+}
+
+.fieldset:nth-child(3) legend {
+  margin-bottom: 25px;
+}
+
+@media (min-width: @tablet-width) {
+  .fieldset {
+    padding: 50px 0;
+  }
+
+  .fieldset::after {
+    content: none;
+  }
+
+  .fieldset:nth-child(3) legend {
+    margin-bottom: 0;
+  }
+}

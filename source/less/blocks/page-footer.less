@@ -1,5 +1,5 @@
 .page-footer {
-  padding: 25px 0;
+  padding: 23px 0;
 
   background-color: #f1f1f1;
 }
@@ -8,8 +8,17 @@
   .container();
 }
 
-.page-footer__logo {
+.page-footer__link {
   display: none;
+}
+
+.page-footer__link[href]:hover .page-footer__icon-logo,
+.page-footer__link[href]:focus .page-footer__icon-logo {
+  fill: @greeny-blue;
+}
+
+.page-footer__link[href]:active .page-footer__icon-logo {
+  opacity: 0.3;
 }
 
 .page-footer__socials-list {
@@ -33,7 +42,7 @@
 
 @media (min-width: @tablet-width) {
   .page-footer {
-    margin-top: 58px;
+    margin-top: 50px;
     padding-top: 52px;
     padding-bottom: 51px;
   }
@@ -44,7 +53,7 @@
     flex-wrap: wrap;
   }
 
-  .page-footer__logo {
+  .page-footer__link {
     display: block;
   }
 
@@ -63,6 +72,6 @@
 
 @media (min-width: @desktop-width) {
   .page-footer {
-    margin-top: 106px;
+    margin-top: 50px;
   }
 }
