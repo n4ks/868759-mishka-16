@@ -113,7 +113,7 @@
           <img class="featured__img" src="img/triple-set-mobile@1x.jpg" alt="Вязанные корзинки в трёх разных вариантах">
         </picture>
         <p class="featured__price">Цена: 990 руб.</p>
-        <button class="featured__button button" type="button">Заказать</button>
+        <button class="featured__button button order-button" type="button">Заказать</button>
       </div>
     </section>
     <hr class="crankle">
@@ -285,39 +285,32 @@
       </a>
     </div>
   </footer>
-  <!-- <section class="catalog-popup">
-    <h2 class="catalog-popup__title page-title page-title--size--lg">Добавить в корзину</h2>
-    <form class="catalog-popup__form" action="https://echo.htmlacademy.ru" method="POST">
-      <label class="catalog-popup__radio radio-button" for="small">S
-        <input class="radio-button__input" type="radio" name="size" id="small">
-      </label>
-      <label class="catalog-popup__radio radio-button" for="medium">M
-        <input class="radio-button__input" type="radio" name="size" id="medium">
-      </label>
-      <label class="catalog-popup__radio radio-button" for="large">L
-        <input class="radio-button__input" type="radio" name="size" id="large">
-      </label>
-      <button class="catalog-popup__button button button--light-teal" type="submit">Добавить</button>
+  <section class="modal">
+    <h2 class="modal__title page-title page-title--modal">Добавить в корзину</h2>
+    <p class="modal__text">
+      Выберите размер:
+    </p>
+    <form class="modal__form modal-form" action="https://echo.htmlacademy.ru" method="POST">
+      <div class="modal-form__container">
+        <label class="modal-form__radio radio-button">
+          <input class="radio-button__input visually-hidden" type="radio" name="size" value="small" checked>
+          <span class="radio-button__label">S</span>
+        </label>
+        <label class="modal-form__radio radio-button">
+          <input class="radio-button__input visually-hidden" type="radio" name="size" value="medium">
+          <span class="radio-button__label">M</span>
+        </label>
+        <label class="modal-form__radio radio-button">
+          <input class="radio-button__input visually-hidden" type="radio" name="size" value="large">
+          <span class="radio-button__label">
+            L
+          </span>
+        </label>
+      </div>
+      <button class="modal-form__button button button--teal" type="submit">Добавить</button>
     </form>
-  </section> -->
+  </section>
+  <script src="js/scripts.js"></script>
 </body>
 
 </html>
-
-<script>
-  var navMain = document.querySelector('.main-nav');
-  var navToggle = document.querySelector('.main-nav__toggle');
-
-  navMain.classList.remove('main-nav--nojs');
-
-  navToggle.addEventListener('click', function () {
-    if (navMain.classList.contains('main-nav--closed')) {
-      navMain.classList.remove('main-nav--closed');
-      navMain.classList.add('main-nav--opened');
-    } else {
-      navMain.classList.add('main-nav--closed');
-      navMain.classList.remove('main-nav--opened');
-    }
-  });
-
-</script>

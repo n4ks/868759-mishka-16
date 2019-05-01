@@ -25,7 +25,7 @@
       </button>
       <ul class="main-nav__list site-list">
         <li class="site-list__item">
-          <a class="site-list__link site-list__link--no-left-offset" href="catalog.html">Каталог товаров</a>
+          <a class="site-list__link site-list__link--no-left-offset" href="#">Каталог товаров</a>
         </li>
         <li class="site-list__item">
           <a class="site-list__link" href="form.html">Вязание на заказ</a>
@@ -89,7 +89,7 @@
             </div>
             <div class="product-card__wrapper-price">
               <p class="product-card__price">1 200 руб.</p>
-              <button class="product-card__button">
+              <button class="product-card__button order-button">
                 <span class="visually-hidden">Добавить в корзину</span>
                 <svg class="product-card__icon" width="20" height="19">
                   <use xlink:href="img/sprite.svg#icon-cart"></use>
@@ -115,7 +115,7 @@
             </div>
             <div class="product-card__wrapper-price">
               <p class="product-card__price">690 руб.</p>
-              <button class="product-card__button">
+              <button class="product-card__button order-button">
                 <span class="visually-hidden">Добавить в корзину</span>
                 <svg class="product-card__icon" width="20" height="19">
                   <use xlink:href="img/sprite.svg#icon-cart"></use>
@@ -141,7 +141,7 @@
             </div>
             <div class="product-card__wrapper-price">
               <p class="product-card__price">1 500 руб.</p>
-              <button class="product-card__button">
+              <button class="product-card__button order-button">
                 <span class="visually-hidden">Добавить в корзину</span>
                 <svg class="product-card__icon" width="20" height="19">
                   <use xlink:href="img/sprite.svg#icon-cart"></use>
@@ -162,11 +162,16 @@
             <source media="(min-width: 768px)" srcset="img/video-tablet@1x.jpg">
             <img class="production__video-preview" src="img/video-mobile@1x.jpg" alt="Процесс производства товаров">
           </picture>
-          <svg class="production__icon-play" xmlns="http://www.w3.org/2000/svg" width="100.678" height="76.891" viewBox="247.3 382.56 100.678 76.891">
-            <path fill="#63D1BB" d="M344.255 400.708s-.92-7.008-3.785-10.078c-3.632-4.041-7.674-4.066-9.541-4.297-13.326-1.023-33.303-1.023-33.303-1.023h-.051s-19.978 0-33.304 1.023c-1.867.23-5.908.256-9.54 4.297-2.84 3.096-3.786 10.078-3.786 10.078s-.896 8.211-.896 16.422v7.699c0 8.21.947 16.421.947 16.421s.921 7.009 3.785 10.078c3.632 4.041 8.364 3.913 10.487 4.349 7.622.767 32.356 1.022 32.356 1.022s20.003-.025 33.329-1.048c1.867-.23 5.908-.256 9.54-4.298 2.84-3.069 3.786-10.078 3.786-10.078s.946-8.21.946-16.421v-7.699c-.023-8.236-.97-16.447-.97-16.447z"/>
-            <path fill="#FFF" d="M297.614 459.449h-.016c-1.015-.011-24.946-.266-32.604-1.037l-.14-.014-.137-.028c-.271-.056-.668-.107-1.126-.167-2.503-.328-7.159-.938-10.839-5.019-3.354-3.616-4.377-10.771-4.483-11.576l-.005-.043c-.039-.342-.965-8.463-.965-16.736v-7.699c0-8.266.875-16.378.912-16.72l.009-.071c.108-.802 1.155-7.928 4.474-11.557 3.996-4.439 8.531-4.899 10.712-5.121.192-.02.37-.037.529-.058l.126-.013c13.277-1.019 33.312-1.031 33.514-1.031h.051c.201 0 20.236.013 33.514 1.031l.126.013c.159.021.337.038.529.058 2.179.221 6.71.682 10.704 5.112 3.354 3.616 4.377 10.771 4.483 11.577l.005.043c.039.342.965 8.459.99 16.753v7.708c0 8.273-.926 16.395-.965 16.736l-.007.053c-.108.805-1.156 7.953-4.478 11.562-3.994 4.435-8.527 4.896-10.707 5.117-.193.02-.371.037-.53.057l-.126.013c-13.276 1.02-33.334 1.057-33.535 1.058l-.015-.001zm-31.944-6.497c7.477.729 31.216.989 31.968.997.657-.001 20.135-.049 33.047-1.036.178-.021.371-.041.58-.062 1.836-.186 4.608-.468 7.186-3.335l.026-.029c1.825-1.974 2.853-6.928 3.075-8.552.059-.514.926-8.358.926-16.08v-7.699c-.023-7.76-.896-15.627-.951-16.109-.32-2.382-1.434-6.789-3.066-8.539l-.035-.038c-2.577-2.868-5.351-3.149-7.186-3.336a34.367 34.367 0 0 1-.58-.062c-13.066-.998-32.834-1.011-33.033-1.011h-.051c-.198 0-19.967.013-33.033 1.011a33.29 33.29 0 0 1-.58.062c-1.835.187-4.607.468-7.186 3.336l-.019.021c-1.828 1.993-2.855 6.924-3.082 8.552-.062.591-.875 8.399-.875 16.089v7.699c0 7.749.871 15.598.926 16.083.32 2.381 1.433 6.789 3.066 8.539l.035.039c2.322 2.584 5.303 2.975 7.479 3.259.481.061.939.121 1.363.201z"/>
+          <svg class="production__icon-play" xmlns="http://www.w3.org/2000/svg" width="100.678" height="76.891"
+            viewBox="247.3 382.56 100.678 76.891">
+            <path fill="#63D1BB"
+              d="M344.255 400.708s-.92-7.008-3.785-10.078c-3.632-4.041-7.674-4.066-9.541-4.297-13.326-1.023-33.303-1.023-33.303-1.023h-.051s-19.978 0-33.304 1.023c-1.867.23-5.908.256-9.54 4.297-2.84 3.096-3.786 10.078-3.786 10.078s-.896 8.211-.896 16.422v7.699c0 8.21.947 16.421.947 16.421s.921 7.009 3.785 10.078c3.632 4.041 8.364 3.913 10.487 4.349 7.622.767 32.356 1.022 32.356 1.022s20.003-.025 33.329-1.048c1.867-.23 5.908-.256 9.54-4.298 2.84-3.069 3.786-10.078 3.786-10.078s.946-8.21.946-16.421v-7.699c-.023-8.236-.97-16.447-.97-16.447z" />
+            <path fill="#FFF"
+              d="M297.614 459.449h-.016c-1.015-.011-24.946-.266-32.604-1.037l-.14-.014-.137-.028c-.271-.056-.668-.107-1.126-.167-2.503-.328-7.159-.938-10.839-5.019-3.354-3.616-4.377-10.771-4.483-11.576l-.005-.043c-.039-.342-.965-8.463-.965-16.736v-7.699c0-8.266.875-16.378.912-16.72l.009-.071c.108-.802 1.155-7.928 4.474-11.557 3.996-4.439 8.531-4.899 10.712-5.121.192-.02.37-.037.529-.058l.126-.013c13.277-1.019 33.312-1.031 33.514-1.031h.051c.201 0 20.236.013 33.514 1.031l.126.013c.159.021.337.038.529.058 2.179.221 6.71.682 10.704 5.112 3.354 3.616 4.377 10.771 4.483 11.577l.005.043c.039.342.965 8.459.99 16.753v7.708c0 8.273-.926 16.395-.965 16.736l-.007.053c-.108.805-1.156 7.953-4.478 11.562-3.994 4.435-8.527 4.896-10.707 5.117-.193.02-.371.037-.53.057l-.126.013c-13.276 1.02-33.334 1.057-33.535 1.058l-.015-.001zm-31.944-6.497c7.477.729 31.216.989 31.968.997.657-.001 20.135-.049 33.047-1.036.178-.021.371-.041.58-.062 1.836-.186 4.608-.468 7.186-3.335l.026-.029c1.825-1.974 2.853-6.928 3.075-8.552.059-.514.926-8.358.926-16.08v-7.699c-.023-7.76-.896-15.627-.951-16.109-.32-2.382-1.434-6.789-3.066-8.539l-.035-.038c-2.577-2.868-5.351-3.149-7.186-3.336a34.367 34.367 0 0 1-.58-.062c-13.066-.998-32.834-1.011-33.033-1.011h-.051c-.198 0-19.967.013-33.033 1.011a33.29 33.29 0 0 1-.58.062c-1.835.187-4.607.468-7.186 3.336l-.019.021c-1.828 1.993-2.855 6.924-3.082 8.552-.062.591-.875 8.399-.875 16.089v7.699c0 7.749.871 15.598.926 16.083.32 2.381 1.433 6.789 3.066 8.539l.035.039c2.322 2.584 5.303 2.975 7.479 3.259.481.061.939.121 1.363.201z" />
             <g>
-              <path fill="#FFF" d="M285.733 403.138v35.708l29.747-17.854z"/></g></svg>
+              <path fill="#FFF" d="M285.733 403.138v35.708l29.747-17.854z" />
+            </g>
+          </svg>
         </div>
         <p class="production__description">
           По просьбам наших любимых фолловеров мы сняли для вас подробное видео о том, как появляются наши товары.
@@ -226,22 +231,30 @@
       </a>
     </div>
   </footer>
+  <section class="modal">
+    <h2 class="modal__title page-title page-title--modal">Добавить в корзину</h2>
+    <p class="modal__text">
+      Выберите размер:
+    </p>
+    <form class="modal__form modal-form" action="https://echo.htmlacademy.ru" method="POST">
+      <div class="modal-form__container">
+        <label class="modal-form__radio radio-button">
+          <input class="radio-button__input visually-hidden" type="radio" name="size" value="small" checked>
+          <span class="radio-button__label">S</span>
+        </label>
+        <label class="modal-form__radio radio-button">
+          <input class="radio-button__input visually-hidden" type="radio" name="size" value="medium">
+          <span class="radio-button__label">M</span>
+        </label>
+        <label class="modal-form__radio radio-button">
+          <input class="radio-button__input visually-hidden" type="radio" name="size" value="large">
+          <span class="radio-button__label">
+            L
+          </span>
+        </label>
+      </div>
+      <button class="modal-form__button button button--teal" type="submit">Добавить</button>
+    </form>
+  </section>
+  <script src="js/scripts.js"></script>
 </body>
-
-<script>
-  var navMain = document.querySelector('.main-nav');
-  var navToggle = document.querySelector('.main-nav__toggle');
-
-  navMain.classList.remove('main-nav--nojs');
-
-  navToggle.addEventListener('click', function () {
-    if (navMain.classList.contains('main-nav--closed')) {
-      navMain.classList.remove('main-nav--closed');
-      navMain.classList.add('main-nav--opened');
-    } else {
-      navMain.classList.add('main-nav--closed');
-      navMain.classList.remove('main-nav--opened');
-    }
-  });
-
-</script>

@@ -2,12 +2,14 @@
   padding-bottom: 27px;
 
   border: @border-grey;
+}
 
-  &:hover {
-    .product-card__container {
-      box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1);
-    }
-  }
+.product-card:hover .product-card__container {
+  box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1);
+}
+
+.product-card:active .product-card__container {
+  box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.1);
 }
 
 .product-card__container {
@@ -17,10 +19,6 @@
 .product-card__link-img {
   display: block;
   margin-bottom: 27px;
-}
-
-.product-card__link-img:active+.product-card__container {
-  box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.1);
 }
 
 .product-card__img {
