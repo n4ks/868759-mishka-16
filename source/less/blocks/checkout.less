@@ -1,0 +1,36 @@
+.checkout {
+  .container();
+  margin-top: 23px;
+}
+
+.checkout__description {
+  margin: 0;
+  margin-bottom: 25px;
+
+  font-size: 13px;
+}
+
+@media (min-width: @tablet-width) {
+  .checkout {
+    padding-top: 50px;
+  }
+
+  .checkout__description {
+    margin-bottom: 8px;
+
+    font-size: 17px;
+    line-height: 30px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .checkout {
+    padding-top: 101px;
+  }
+
+  .checkout__description {
+    .formContainer();
+
+    padding-right: 175px;
+  }
+}

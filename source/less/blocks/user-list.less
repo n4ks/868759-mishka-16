@@ -6,12 +6,13 @@
 }
 
 .user-list__item {
-  box-shadow: 0 1px 0 0 #ececec;
+  margin: 0 -30px;
+  border-bottom: 1px solid @grey;
 }
 
 .user-list__link {
   display: block;
-  padding: 27px 10px 28px 76px;
+  padding: 27px 10px 27px 75px;
 
   color: #000000;
 
@@ -23,27 +24,23 @@
   &[href]:active {
     color: rgba(0, 0, 0, 0.3);
   }
+}
 
-  &--icon {
-    position: relative;
+.user-list__link--icon {
+  position: relative;
+}
 
-    &:hover,
-    &:focus {
-      .user-list__icon {
-        opacity: 1;
+.user-list__link--icon:hover > .user-list__icon,
+.user-list__link--icon:focus > .user-list__icon {
+  opacity: 1;
 
-        path {
-          fill: @seafoam-blue;
-        }
-      }
-
-      &:active {
-        .user-list__icon {
-          opacity: 0.3;
-        }
-      }
-    }
+  path {
+    fill: @seafoam-blue;
   }
+}
+
+.user-list__link--icon:active > .user-list__icon {
+  opacity: 0.3;
 }
 
 .user-list__icon {
@@ -59,11 +56,11 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: flex-start;
-    width: 349px;
   }
 
   .user-list__item {
-    box-shadow: none;
+    margin: 0;
+    border-bottom: 0;
   }
 
   .user-list__link {
@@ -74,56 +71,27 @@
       padding: 0;
       width: 82px;
       height: 88px;
-      box-shadow: -1px 0 0 0 #ececec,
-        1px 0 0 0 #ececec;
-
-      // .user-list__icon {
-      //   top: 35px;
-      //   left: 32px;
-      // }
+      border-left: 1px solid @grey;
+      border-right: 1px solid @grey;
     }
   }
 
   .user-list__icon {
     top: 35px;
-    left: 32px;
+    left: 33px;
   }
 }
 
-// @media (min-width: @tablet-width) {
-//   .user-list {
-//     display: flex;
-//     width: 350px;
-//   }
+@media (min-width: @desktop-width) {
+  .user-list__icon {
+    left: 30px;
+  }
 
-//   .user-list__link {
-//     padding: 0;
-//     padding-top: 32px;
-//     padding-bottom: 32px;
-//   }
+  .user-list__link {
+    padding-left: 85px;
 
-//   .user-list__item {
-//     box-shadow: none;
-//   }
-
-//   .user-list__item:first-child .user-list__link {
-//     font-size: 0;
-//     width: 84px;
-//   }
-
-//   .user-list__item:nth-child(2) {
-//     padding-left: 84px;
-//   }
-
-//   .user-list__icon {
-//     &--1 {
-//       top: 35px;
-//       left: 35px;
-//     }
-
-//     &--2 {
-//       top: 35px;
-//       left: -52px;
-//     }
-//   }
-// }
+    &--no-text {
+      padding: 0;
+    }
+  }
+}

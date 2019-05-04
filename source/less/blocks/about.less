@@ -1,12 +1,11 @@
 .about {
-  padding-top: 24px;
+  .container();
 
-  width: 260px;
-  margin: 0 auto;
+  padding-top: 27px;
 }
 
 .about__title {
-  margin-bottom: 25px;
+  margin-bottom: 26px;
 }
 
 .about__list {
@@ -46,19 +45,15 @@
 
 @media (min-width: @tablet-width) {
   .about {
-    padding-top: 46px;
-
-    width: 668px;
+    padding-top: 47px;
+    margin-bottom: 83px;
   }
 
   .about__title {
     margin-bottom: 44px;
-
-    font-size: 43px;
-    line-height: 50px;
   }
 
-  .about__wrapper {
+  .about__container {
     display: flex;
     flex-wrap: wrap;
   }
@@ -81,17 +76,13 @@
 
 @media (min-width: @desktop-width) {
   .about {
-    padding-top: 60px;
     padding-left: 225px;
-
-    width: 1050px;
+    padding-top: 60px;
+    margin-bottom: 90px;
   }
 
   .about__title {
     margin-bottom: 42px;
-
-    font-size: 53px;
-    line-height: 57px;
   }
 
   .about__list:first-child {

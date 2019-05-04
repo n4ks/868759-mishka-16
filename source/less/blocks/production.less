@@ -1,0 +1,178 @@
+.production {
+  .container();
+
+  margin-bottom: 59px;
+}
+
+.production__item {
+  padding: 0 33px;
+  padding-bottom: 32px;
+
+  border: @border-grey;
+}
+
+.production__title {
+  position: relative;
+
+  padding-top: 23px;
+  padding-left: 57px;
+  margin-bottom: 25px;
+
+  &--icon {
+    &::before {
+      content: "";
+
+      position: absolute;
+      top: 28px;
+      left: 0;
+
+      width: 32px;
+      height: 32px;
+
+      background-image: url("/img/icon-video.svg");
+      background-repeat: no-repeat;
+      background-position: 0 0;
+    }
+  }
+}
+
+.production__video {
+  position: relative;
+  margin-bottom: 28px;
+}
+
+.production__video-preview {
+  display: block;
+
+  max-width: calc(100% + 66px);
+  margin: 0 -33px;
+}
+
+.production__description {
+  margin: 0;
+  margin-bottom: 25px;
+
+  font-size: 13px;
+  line-height: 24px;
+}
+
+.production__button {
+  width: 100%;
+}
+
+.production__icon-play {
+  content: "";
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+  background-position: 0 0;
+  background-repeat: no-repeat;
+  width: 101px;
+  height: 77px;
+
+  &:hover {
+    width: 121px;
+    height: 92px;
+  }
+
+  &:active {
+    width: 81px;
+    height: 62px;
+
+    opacity: 0.7;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .production {
+    margin-bottom: 64px;
+  }
+
+  .production__item {
+    display: flex;
+    flex-direction: column;
+
+    padding: 0 40px;
+    padding-bottom: 45px;
+  }
+
+  .production__video {
+    order: -1;
+
+    margin-bottom: 39px;
+  }
+
+  .production__video-preview {
+    max-width: calc(100% + 80px);
+    margin: 0 -40px;
+  }
+
+  .production__title {
+    padding-top: 0;
+    padding-left: 65px;
+    margin-bottom: 32px;
+
+    &--icon {
+      &::before {
+        top: -5px;
+        left: 1px;
+      }
+    }
+  }
+
+  .production__description {
+    margin-bottom: 35px;
+
+    font-size: 15px;
+    line-height: 30px;
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .production {
+    margin-bottom: 104px;
+  }
+
+  .production__item {
+    position: relative;
+    display: block;
+
+    padding: 95px 57px 60px 760px;
+  }
+
+  .production__item:hover {
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.1);
+  }
+
+  .production__item:active {
+    box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.1);
+  }
+
+
+  .production__video {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .production__title {
+    padding: 0;
+    margin-bottom: 33px;
+
+    &::before {
+      top: -54px;
+      left: 0;
+    }
+  }
+
+  .production__video-preview {
+    margin: 0;
+  }
+
+  .production__description {
+    margin-bottom: 46px;
+  }
+}
