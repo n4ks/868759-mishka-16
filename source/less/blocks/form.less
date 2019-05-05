@@ -1,19 +1,16 @@
 .form__list {
-  padding: 0;
-  margin: 0;
-
-  list-style: none;
+  .resetList();
 }
 
-.form__list--1 .form__item {
+.form__list--type--1 .form__item {
   margin-bottom: 15px;
 }
 
-.form__list--2 .form__item {
+.form__list--type--2 .form__item {
   margin-bottom: 22px;
 }
 
-.form__list--3 .form__item {
+.form__list--type--3 .form__item {
   margin-bottom: 19px;
 }
 
@@ -21,16 +18,11 @@
   margin-bottom: 0;
 }
 
-.form legend {
-  margin-bottom: 24px;
-}
-
 .form__fieldset {
-  margin-bottom: 33px;
-}
+  .formContainer();
 
-.form__fieldset:nth-child(3) {
-  margin-bottom: 31px;
+  padding-top: 25px;
+  padding-bottom: 32px;
 }
 
 .form__field--extra-margin {
@@ -42,15 +34,17 @@
 }
 
 .form__container {
-  margin-bottom: 32px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-bottom: 31px;
 }
 
-.form__container-bottom {
-  margin-bottom: 55px;
+.form > .form__container:last-of-type {
+  padding-bottom: 0;
 }
 
 .form__field--textarea {
-  margin-bottom: 16px;
+  margin-bottom: 14px;
 }
 
 .form__info {
@@ -67,38 +61,26 @@
 
 @media (min-width: @tablet-width) {
   .form__fieldset {
-    .formContainer();
-
     position: relative;
 
-    margin-bottom: 0;
+    padding-top: 50px;
+    padding-bottom: 50px;
   }
 
-  .form__fieldset--bg--gray {
+  .form__row--bg--gray {
     background-color: #f1f1f1;
-    margin-left: -50px;
-    margin-right: -50px;
-  }
-
-  .form__wrapper {
-    padding-left: 50px;
-    padding-right: 50px;
   }
 
   .form legend {
-    margin: 0;
-
     position: absolute;
-    top: 65px;
-    left: 0;
+    top: 67px;
+    left: 50px;
+
+    padding-right: 0;
+    background-color: inherit;
   }
 
-  .form__wrapper legend {
-    left: 51px;
-    top: 68px;
-  }
-
-  .form__list--1 .form__item {
+  .form__list--type--1 .form__item {
     margin-bottom: 25px;
   }
 
@@ -106,32 +88,28 @@
     margin-bottom: 0;
   }
 
-  .form__list--2 {
+  .form__list--type--2 {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
   }
 
-  .form__list--2 .form__item {
+  .form__list--type--2 .form__item {
     margin-bottom: 24px;
 
     width: 48%;
   }
 
-  .form__list--2 .form__item:nth-last-child(1),
-  .form__list--2 .form__item:nth-last-child(2) {
+  .form__list--type--2 .form__item:nth-last-child(1),
+  .form__list--type--2 .form__item:nth-last-child(2) {
     margin-bottom: 0;
   }
 
-  .form__fieldset:nth-child(3) {
-    margin-bottom: 0;
-  }
-
-  .form__list--3 {
+  .form__list--type--3 {
     width: 100%;
   }
 
-  .form__list--3 .form__item {
+  .form__list--type--3 .form__item {
     margin-bottom: 24px;
 
     &:last-child {
@@ -141,14 +119,8 @@
 
   .form__container {
     padding: 50px 0;
-    margin: 0 -50px;
-    margin-bottom: 50px;
-
-    background-color: #f1f1f1;
-  }
-
-  .form__container .form__wrapper {
-    padding: 0 50px;
+    padding-left: 51px;
+    padding-right: 50px;
   }
 
   .form__field--extra-margin {
@@ -156,7 +128,7 @@
   }
 
   .form__field--textarea {
-    margin-bottom: 53px;
+    margin-bottom: 51px;
   }
 
   .form__container-bottom {
@@ -186,13 +158,13 @@
 }
 
 @media (min-width: @desktop-width) {
-  .form__fieldset legend {
-    top: 66px;
-    left: 62px;
+  .form__fieldset--padding-small {
+    padding-right: 50px;
   }
 
-  .form__wrapper legend {
-    left: 110px;
+  .form__fieldset legend {
+    top: 68px;
+    left: 112px;
   }
 
   .form__fieldset:nth-child(2) {
@@ -200,11 +172,11 @@
     padding-bottom: 51px;
   }
 
-  .form__list--2 {
+  .form__list--type--2 {
     justify-content: flex-start;
   }
 
-  .form__list--2 .form__item {
+  .form__list--type--2 .form__item {
     width: 30%;
 
     &:nth-last-child(3) {
@@ -212,25 +184,17 @@
     }
   }
 
-  .form__fieldset:nth-child(3) {
-    padding-right: 175px;
-  }
-
   .form__container {
     padding-left: 110px;
     padding-right: 224px;
   }
 
-  .form__container .form__wrapper {
-    padding: 0;
-  }
-
   .form__field--textarea {
-    margin-bottom: 49px;
+    margin-bottom: 47px;
   }
 
   .form__container-bottom {
-    .formContainer();
-    padding-right: 175px;
+    padding-left: 115px;
+    padding-right: 0;
   }
 }

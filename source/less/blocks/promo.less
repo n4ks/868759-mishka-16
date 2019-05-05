@@ -1,5 +1,4 @@
 .promo {
-  .container();
   padding-top: 70px;
   padding-bottom: 75px;
 
@@ -10,11 +9,20 @@
 
     padding-bottom: 328px;
 
-    background-color: #ffffff;
-    background-image: url("/img/hero-mobile@1x.jpg");
+    background-color: #f9f9f9;
+    background-image: url("../img/hero-mobile@1x.jpg");
     background-position: center -18px;
     background-repeat: no-repeat;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/hero-mobile@2x.jpg");
+      background-size: 575px auto;
+    }
   }
+}
+
+.promo__container {
+  .container();
 }
 
 .promo__title {
@@ -22,17 +30,17 @@
 }
 
 .promo__wrapper {
+  margin: 0 -30px;
+
   position: absolute;
   bottom: 0;
-  left: 50%;
-
-  transform: translate(-50%);
 
   width: 100%;
+  max-width: 1050px;
 }
 
 .promo__button {
-  position: absolute;
+  position: relative;
 
   display: block;
 
@@ -46,20 +54,8 @@
 
   box-sizing: border-box;
 
-  &--style--1 {
-    left: 0;
-    bottom: 103px;
-    background-color: @seafoam-blue;
-
-    .promo__icon {
-      top: 23px;
-      right: 36px;
-    }
-  }
-
   &:hover,
   &:focus {
-    padding-top: 30px;
     padding-bottom: 35px;
 
     .promo__icon {
@@ -72,35 +68,41 @@
       opacity: 0.3;
     }
   }
+}
 
-  &--style--1:hover,
-  &--style--1:focus {
+.promo__button--style--1 {
+  background-color: @seafoam-blue;
+
+  .promo__icon {
+    top: 23px;
+    right: 36px;
+  }
+
+  &:hover,
+  &:focus {
     background-color: #59d5bc;
   }
 
-
-  &--style--1:active {
+  &:active {
     color: @button-font-active;
     background-color: #59d5bc;
   }
+}
 
-  &--style--2 {
-    left: 0;
-    bottom: 0;
-    background-color: @aqua-marine;
+.promo__button--style--2 {
+  background-color: @aqua-marine;
 
-    .promo__icon {
-      top: 20px;
-      right: 26px;
-    }
+  .promo__icon {
+    top: 20px;
+    right: 26px;
   }
 
-  &--style--2:hover,
-  &--style--2:focus {
+  &:hover,
+  &:focus {
     background-color: @greeny-blue;
   }
 
-  &--style--2:active {
+  &:active {
     color: @button-font-active;
     background-color: @greeny-blue;
   }
@@ -126,10 +128,14 @@
       padding-top: 154px;
       padding-bottom: 489px;
 
-      background-color: #ffffff;
-      background-image: url("/img/hero-tablet@1x.jpg");
+      background-image: url("../img/hero-tablet@1x.jpg");
       background-repeat: no-repeat;
       background-position: center;
+
+      @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+        background-image: url("../img/hero-tablet@2x.jpg");
+        background-size: 1150px auto;
+      }
 
       .promo__title br {
         display: none;
@@ -143,7 +149,7 @@
       bottom: -20px;
       left: 0;
 
-      background-image: url("/img/bg-zigzag-fill.svg");
+      background-image: url("../img/bg-zigzag-fill.svg");
       background-repeat: repeat;
       background-position: 0 0;
 
@@ -153,25 +159,23 @@
   }
 
   .promo__wrapper {
-    width: 87%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+
+    margin: 0;
+
+    width: calc(100% - 100px);
   }
 
   .promo__button {
-    padding: 28px 90px 29px 36px;
+    padding: 27px 90px 30px 36px;
     width: 50%;
 
     font-size: 20px;
     line-height: 30px;
 
-    &:hover,
-    &:focus {
-      padding-top: 33px;
-      padding-bottom: 34px;
-    }
-
     &--style--1 {
-      bottom: 0;
-
       .promo__icon {
         top: 30px;
         right: 36px;
@@ -179,9 +183,6 @@
     }
 
     &--style--2 {
-      right: 0;
-      left: auto;
-
       .promo__icon {
         top: 32px;
         right: 34px;
@@ -199,14 +200,15 @@
   .promo--toys {
     padding-top: 154px;
     padding-bottom: 475px;
-    background-image: url("/img/hero-desktop@1x.jpg");
+    background-image: url("../img/hero-desktop@1x.jpg");
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/hero-desktop@2x.jpg");
+      background-size: 1150px auto;
+    }
 
     .promo__title {
       padding: 0 216px;
     }
-  }
-
-  .promo__wrapper {
-    width: 91.3%;
   }
 }
