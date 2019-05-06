@@ -48,6 +48,7 @@
 
 .product-card__price {
   margin: 0;
+  flex: 1;
 
   font-weight: 700;
 }
@@ -63,7 +64,8 @@
 
 .product-card__button {
   display: flex;
-  justify-content: center;
+  flex: 1;
+  justify-content: flex-end;
   align-items: center;
 
   width: 20px;
@@ -108,9 +110,10 @@
 
   .product-card__container {
     display: flex;
+    // разваливается на десктопе
+    flex: 1;
     flex-direction: column;
     justify-content: space-between;
-    flex-grow: 1;
 
     padding: 25px 32px 27px 26px;
   }
@@ -146,6 +149,7 @@
   .product-card__container {
     padding-top: 26px;
     padding-bottom: 25px;
+    flex: auto;
   }
 
   .product-card__wrapper {

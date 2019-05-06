@@ -37,6 +37,8 @@
 
   width: 100%;
   max-width: 1050px;
+
+  overflow: hidden;
 }
 
 .promo__button {
@@ -111,10 +113,9 @@
 .promo__button .promo__icon {
   position: absolute;
   opacity: 0.5;
+  fill: #149080;
 
-  path {
-    fill: #149080;
-  }
+  pointer-events: none;
 }
 
 @media (min-width: @tablet-width) {

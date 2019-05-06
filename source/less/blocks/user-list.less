@@ -33,10 +33,7 @@
 .user-list__link--icon:hover > .user-list__icon,
 .user-list__link--icon:focus > .user-list__icon {
   opacity: 1;
-
-  path {
-    fill: @seafoam-blue;
-  }
+  fill: @seafoam-blue;
 }
 
 .user-list__link--icon:active > .user-list__icon {
@@ -55,7 +52,8 @@
   .user-list {
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-start;
+    flex: 1;
+    justify-content: flex-end;
   }
 
   .user-list__item {
