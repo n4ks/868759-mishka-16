@@ -22,7 +22,7 @@
     <include src="build/img/sprite.svg"></include>
   </div>
   <header class="page-header">
-    <nav class="main-nav main-nav--closed">
+    <nav class="main-nav main-nav--closed main-nav--nojs">
       <a class="main-nav__logo" href="index.html">
         <picture>
           <source media="(min-width: 1150px)" srcset="img/logo-desktop.svg">
@@ -90,7 +90,7 @@
           <ul class="form__list form__list--type--1">
             <li class="form__item">
               <label class="form__radio radio">
-                <input class="radio__input visually-hidden" type="radio" name="type" value="accessory">
+                <input class="radio__input visually-hidden" type="radio" name="type" value="accessory" checked>
                 <span class="radio__button"></span>
                 <span class="radio__text">Аксессуар для интерьера</span>
               </label>
@@ -110,14 +110,14 @@
             <ul class="form__list form__list--type--2">
               <li class="form__item">
                 <label class="form__checkbox checkbox">
-                  <input class="checkbox__input visually-hidden" type="checkbox" name="color" value="white" checked="">
+                  <input class="checkbox__input visually-hidden" type="checkbox" name="color" value="white" checked>
                   <span class="checkbox__button"></span>
                   Белый
                 </label>
               </li>
               <li class="form__item">
                 <label class="form__checkbox checkbox">
-                  <input class="checkbox__input visually-hidden" type="checkbox" name="color" value="gray" checked="">
+                  <input class="checkbox__input visually-hidden" type="checkbox" name="color" value="gray" checked>
                   <span class="checkbox__button"></span>
                   Серый
                 </label>
@@ -177,7 +177,7 @@
           <div class="form__container">
             <label class="form__field form__field--extra-margin field field--green">
               <span class="field__text field__text--extra-padding">Тел</span>
-              <input class="field__input field__input--phone" type="text" name="phone" placeholder="+7 XXX XXX XX XX*"
+              <input class="field__input field__input--phone" type="tel" name="phone" placeholder="+7 XXX XXX XX XX*"
                 required>
               <svg class="field__icon field__icon--1" width="24.829" height="24.333">
                 <use xlink:href="#icon-phone"></use>
@@ -185,7 +185,7 @@
             </label>
             <label class="form__field form__field--extra-margin field field--green">
               <span class="field__text">E-mail</span>
-              <input class="field__input field__input--email field__input--icon--2" type="text" name="email"
+              <input class="field__input field__input--email field__input--icon--2" type="email" name="email"
                 placeholder="Ваш Email*" required>
               <svg class="field__icon field__icon--2" width="32" height="32">
                 <use xlink:href="#icon-mail"></use>
@@ -243,7 +243,7 @@
           </a>
         </li>
       </ul>
-      <a class="page-footer__copyright copyright" href="https://htmlacademy.ru">
+      <a class="page-footer__copyright copyright" href="https://htmlacademy.ru/intensive/adaptive">
         Разработано
         <span class="visually-hidden">HTML Academy</span>
         <svg class="copyright__icon" xmlns="http://www.w3.org/2000/svg" width="27" height="34" viewBox="0 0 26.9 34.1">

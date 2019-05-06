@@ -10,7 +10,8 @@
 }
 
 .fieldset legend {
-  padding-right: 20px;
+  width: 100%;
+  position: relative;
 
   font-size: 17px;
   line-height: 16px;
@@ -19,27 +20,29 @@
   color: @seafoam-blue;
 
   text-transform: uppercase;
-
-  background-color: white;
 }
 
-.fieldset::after {
+.fieldset legend::after {
   content: "";
   position: absolute;
 
   top: 7px;
-  left: 30px;
+  right: 0;
 
   width: calc(100% - 60px);
   height: 1px;
 
-  background-color: #62d1da;
+  background-color: @light-green;
 
   z-index: -1;
 }
 
 @media (min-width: @tablet-width) {
-  .fieldset::after {
-    content: none;
+  .fieldset legend {
+    width: auto;
+
+    &::after {
+      content: none;
+    }
   }
 }
