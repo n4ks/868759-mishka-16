@@ -20,6 +20,7 @@ var orderPopup = document.querySelector(".modal");
 for (var i = 0; i < orderButtons.length; i++) {
   orderButtons[i].addEventListener("click", function (event) {
     event.preventDefault();
+    orderPopup.classList.remove("modal--hide");
     orderPopup.classList.add("modal--show");
   });
 }
@@ -32,3 +33,17 @@ window.addEventListener("keydown", function (event) {
     }
   }
 });
+
+/*
+document.addEventListener("click", function(event) {
+  if (orderPopup.classList.contains("modal--show") && event.target != orderPopup) {
+    console.log("Ok")
+    orderPopup.classList.add("modal--hide");
+    orderPopup.classList.remove("modal--show");
+  }
+  else
+  {
+    event.preventDefault();
+  }
+});
+*/
