@@ -1,0 +1,43 @@
+.button {
+  display: block;
+
+  padding: 14px 10px;
+
+  font-family: @page-fonts;
+  font-size: 17px;
+  line-height: 20px;
+  font-weight: 700;
+  color: @grey-brown;
+  text-transform: uppercase;
+  text-align: center;
+
+  background-color: @white;
+
+  border: 2px solid @grey-brown;
+  box-sizing: border-box;
+
+  &:hover,
+  &:focus {
+    color: @white;
+    background-color: @grey-brown;
+  }
+
+  &:active {
+    color: @button-font-active;
+  }
+
+  &--teal {
+    background-color: @seafoam-blue;
+    color: @white;
+    border-color: @seafoam-blue;
+
+    &:hover,
+    &:focus {
+      background-color: @greeny-blue;
+    }
+
+    &:active {
+      color: @button-font-active;
+    }
+  }
+}

@@ -1,0 +1,49 @@
+.resetList() {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.container() {
+  margin: 0 auto;
+  padding: 0 30px;
+
+  max-width: 1150px;
+  box-sizing: border-box;
+
+  @media (min-width: @tablet-width) {
+    padding: 0 50px;
+  }
+}
+
+.formLabel() {
+  font-size: 17px;
+  line-height: 18px;
+  font-weight: 700;
+
+  color: @black;
+
+  @media (min-width: @tablet-width) {
+    font-size: 19px;
+  }
+
+  @media (min-width: @desktop-width) {
+    font-size: 19px;
+  }
+}
+
+.formContainer() {
+  .container();
+  padding-left: 30px;
+  padding-right: 30px;
+
+  @media (min-width: @tablet-width) {
+    padding-left: 217px;
+    padding-right: 50px;
+  }
+
+  @media (min-width: @desktop-width) {
+    padding-left: 225px;
+    padding-right: 225px;
+  }
+}
