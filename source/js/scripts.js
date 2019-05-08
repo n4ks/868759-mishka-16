@@ -34,16 +34,8 @@ window.addEventListener("keydown", function (event) {
   }
 });
 
-/*
-document.addEventListener("click", function(event) {
-  if (orderPopup.classList.contains("modal--show") && event.target != orderPopup) {
-    console.log("Ok")
-    orderPopup.classList.add("modal--hide");
-    orderPopup.classList.remove("modal--show");
+window.onclick = function (event) {
+  if (event.target == orderPopup && orderPopup.classList.contains("modal--show")) {
+    orderPopup.classList.add("modal--hide")
   }
-  else
-  {
-    event.preventDefault();
-  }
-});
-*/
+}

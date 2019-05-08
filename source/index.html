@@ -7,6 +7,7 @@
   <meta name="format-detection" content="telephone=no">
   <script>
     document.createElement("picture");
+
   </script>
   <script src="js/picturefill.min.js" async></script>
   <link rel="preload" href="fonts/opensans.woff2" as="font" crossorigin="anonymous">
@@ -280,29 +281,31 @@
     </div>
   </footer>
   <section class="modal modal--hide">
-    <h2 class="modal__title page-title page-title--modal">Добавить в корзину</h2>
-    <p class="modal__text">
-      Выберите размер:
-    </p>
-    <form class="modal__form modal-form" action="https://echo.htmlacademy.ru" method="POST">
-      <div class="modal-form__container">
-        <label class="modal-form__radio radio-button">
-          <input class="radio-button__input visually-hidden" type="radio" name="size" value="small" checked>
-          <span class="radio-button__label">S</span>
-        </label>
-        <label class="modal-form__radio radio-button">
-          <input class="radio-button__input visually-hidden" type="radio" name="size" value="medium">
-          <span class="radio-button__label">M</span>
-        </label>
-        <label class="modal-form__radio radio-button">
-          <input class="radio-button__input visually-hidden" type="radio" name="size" value="large">
-          <span class="radio-button__label">
-            L
-          </span>
-        </label>
-      </div>
-      <button class="modal-form__button button button--teal" type="submit">Добавить</button>
-    </form>
+    <div class="modal__window">
+      <h2 class="modal__title page-title page-title--modal">Добавить в корзину</h2>
+      <p class="modal__text">
+        Выберите размер:
+      </p>
+      <form class="modal__form modal-form" action="https://echo.htmlacademy.ru" method="POST">
+        <div class="modal-form__container">
+          <label class="modal-form__radio radio-button">
+            <input class="radio-button__input visually-hidden" type="radio" name="size" value="small" checked>
+            <span class="radio-button__label">S</span>
+          </label>
+          <label class="modal-form__radio radio-button">
+            <input class="radio-button__input visually-hidden" type="radio" name="size" value="medium">
+            <span class="radio-button__label">M</span>
+          </label>
+          <label class="modal-form__radio radio-button">
+            <input class="radio-button__input visually-hidden" type="radio" name="size" value="large">
+            <span class="radio-button__label">
+              L
+            </span>
+          </label>
+        </div>
+        <button class="modal-form__button button button--teal" type="submit">Добавить</button>
+      </form>
+    </div>
   </section>
   <script src="js/scripts.js"></script>
 </body>
