@@ -1,5 +1,17 @@
 .modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+
   display: none;
+  width: 100%;
+  height: 100%;
+
+  background-color: fade(@black, 10%);
+  z-index: 15;
+}
+
+.modal__window {
 
   position: fixed;
   top: 140px;
@@ -10,14 +22,12 @@
 
   width: 320px;
 
-  border: 1px solid #c6c6c6;
+  border: 1px solid @grey-2;
   border-bottom: none;
   box-shadow: 0 5px 6px rgba(0, 1, 1, 0.25);
 
-  background-color: #ffffff;
+  background-color: @white;
   box-sizing: border-box;
-
-  z-index: 10;
 }
 
 .modal__title {
@@ -40,8 +50,12 @@
   display: block;
 }
 
+.modal--hide {
+  display: none;
+}
+
 @media (min-width: @tablet-width) {
-  .modal {
+  .modal__window {
     width: 566px;
     padding-top: 33px;
     padding-left: 105px;

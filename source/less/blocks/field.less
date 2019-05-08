@@ -4,8 +4,6 @@
   &--green {
     display: block;
 
-    position: relative;
-
     font-size: 17px;
     line-height: 18px;
     text-transform: uppercase;
@@ -13,31 +11,25 @@
     color: @seafoam-blue;
 
     overflow: hidden;
-
-    &::after {
-      content: "";
-      position: absolute;
-
-      top: 8px;
-      left: 0;
-
-      width: 100%;
-      height: 1px;
-
-      background-color: #62d1da;
-
-      z-index: -1;
-    }
   }
 }
 
 .field__text {
-  padding-right: 24px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
 
-  background-color: #ffffff;
+  &::after {
+    content: "";
 
-  &--extra-padding {
-    padding-right: 31px;
+    display: block;
+    margin-left: 25px;
+
+    width: 100%;
+    height: 1px;
+
+    background-color: @light-green;
   }
 }
 
@@ -53,13 +45,15 @@
   line-height: 18px;
 
   border: none;
-  border-bottom: 2px solid #000000;
+  border-bottom: 2px solid @black;
+
+  background-color: transparent;
 
   box-sizing: border-box;
 
   &:hover,
   &:focus {
-    border-color: #62d1ba;
+    border-color: @light-green;
   }
 
   &::placeholder {
@@ -68,7 +62,7 @@
 
   &--phone {
     padding-top: 15px;
-    padding-bottom: 14px;
+    padding-bottom: 13px;
 
     font-size: 19px;
   }
@@ -82,10 +76,9 @@
     padding: 0;
     padding-top: 14px;
     padding-left: 14px;
-    padding-bottom: 88px;
     margin-top: 23px;
 
-    border: 2px solid #000000;
+    border: 2px solid @black;
 
     resize: none;
   }
@@ -107,10 +100,10 @@
   }
 }
 
-.field__input:hover ~ .field__icon,
-.field__input:focus ~ .field__icon {
+.field__input:hover .field__icon,
+.field__input:focus .field__icon {
   opacity: 1;
-  fill: #62d1ba;
+  fill: @light-green;
 }
 
 @media (min-width: @tablet-width) {
@@ -138,10 +131,6 @@
     position: relative;
 
     padding-left: 167px;
-
-    &::after {
-      content: none;
-    }
   }
 
   .field--green .field__text {
@@ -159,7 +148,9 @@
 
     flex-shrink: 0;
 
-    background-color: inherit;
+    &::after {
+      content: none;
+    }
   }
 
   .field__icon {
@@ -176,8 +167,8 @@
 
   .field__input--textarea {
     padding-top: 13px;
+    padding-bottom: 0;
     padding-left: 14px;
-    padding-bottom: 89px;
 
     margin: 0;
     margin-left: 128px;
@@ -197,12 +188,7 @@
     right: 4px;
   }
 
-  .field--textarea {
-    padding-left: 175px;
-    padding-right: 175px;
-  }
-
   .field--textarea .field__text {
-    left: 62px;
+    left: 2px;
   }
 }

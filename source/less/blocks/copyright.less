@@ -8,22 +8,21 @@
   font-weight: 700;
   color: #000000;
 
-  path {
-    fill: @seafoam-blue;
-  }
-
-  &:hover,
-  &:focus {
-    path {
-      fill: @greeny-blue;
-    }
-  }
-
   &:active {
     opacity: 0.3;
   }
+}
 
-  .copyright__icon {
-    margin-left: 30px;
+.copyright__icon {
+  margin-left: 30px;
+
+  pointer-events: none;
+
+  fill: @seafoam-blue;
+
+  &:hover,
+  &:focus {
+      fill: @greeny-blue;
   }
+
 }

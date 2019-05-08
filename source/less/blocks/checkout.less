@@ -1,10 +1,11 @@
 .checkout {
-  .container();
   margin-top: 23px;
+  margin-bottom: 25px;
 }
 
 .checkout__description {
-  margin: 0;
+  .container();
+
   margin-bottom: 25px;
 
   font-size: 13px;
@@ -13,6 +14,7 @@
 @media (min-width: @tablet-width) {
   .checkout {
     padding-top: 50px;
+    margin-bottom: 0;
   }
 
   .checkout__description {
@@ -26,11 +28,13 @@
 @media (min-width: @desktop-width) {
   .checkout {
     padding-top: 101px;
+    margin-bottom: 0;
   }
 
   .checkout__description {
-    .formContainer();
+    margin-bottom: 7px;
 
-    padding-right: 175px;
+    padding-left: 226px;
+    padding-right: 200px;
   }
 }

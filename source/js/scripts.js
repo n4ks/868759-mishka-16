@@ -20,6 +20,7 @@ var orderPopup = document.querySelector(".modal");
 for (var i = 0; i < orderButtons.length; i++) {
   orderButtons[i].addEventListener("click", function (event) {
     event.preventDefault();
+    orderPopup.classList.remove("modal--hide");
     orderPopup.classList.add("modal--show");
   });
 }
@@ -32,3 +33,9 @@ window.addEventListener("keydown", function (event) {
     }
   }
 });
+
+window.onclick = function (event) {
+  if (event.target == orderPopup && orderPopup.classList.contains("modal--show")) {
+    orderPopup.classList.add("modal--hide")
+  }
+}

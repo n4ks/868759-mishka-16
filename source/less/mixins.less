@@ -21,7 +21,7 @@
   line-height: 18px;
   font-weight: 700;
 
-  color: #000000;
+  color: @black;
 
   @media (min-width: @tablet-width) {
     font-size: 19px;
@@ -33,13 +33,17 @@
 }
 
 .formContainer() {
-  padding-left: 167px;
+  .container();
+  padding-left: 30px;
+  padding-right: 30px;
 
   @media (min-width: @tablet-width) {
-    padding-left: 167px;
+    padding-left: 217px;
+    padding-right: 50px;
   }
 
   @media (min-width: @desktop-width) {
-    padding-left: 175px;
+    padding-left: 225px;
+    padding-right: 225px;
   }
 }
