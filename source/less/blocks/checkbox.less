@@ -7,6 +7,10 @@
   align-items: center;
 }
 
+.checkbox:hover .checkbox__button {
+  border-color: @light-green;
+}
+
 .checkbox__button {
   position: relative;
 
@@ -18,10 +22,6 @@
   border: 2px solid @grey-brown;
 
   cursor: pointer;
-
-  &:hover {
-    border-color: @light-green;
-  }
 }
 
 .checkbox__input:focus + .checkbox__button {
@@ -56,6 +56,8 @@
 @media (min-width: @tablet-width) {
   .checkbox__button {
     margin-right: 27px;
+
+    flex-shrink: 0;
 
     width: 50px;
     height: 48px;
