@@ -1,0 +1,33 @@
+.radio-button__label {
+  display: block;
+
+  padding: 16px 10px;
+
+  font-size: 17px;
+  line-height: 16px;
+  font-weight: 700;
+
+  text-align: center;
+  cursor: pointer;
+
+  box-sizing: border-box;
+
+  background-color: @white;
+  border: 2px solid rgba(68, 68, 68, 0.1);
+}
+
+.radio-button__input:hover + .radio-button__label,
+.radio-button__input:focus + .radio-button__label {
+  border-color: rgba(68, 68, 68, 0.3);
+}
+
+.radio-button__input:checked + .radio-button__label {
+  border-color: @light-green;
+}
+
+.radio-button__input:disabled + .radio-button__label,
+.radio-button__input--disabled + .radio-button__label {
+  opacity: 0.3;
+
+  pointer-events: none;
+}

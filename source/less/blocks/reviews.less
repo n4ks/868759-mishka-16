@@ -1,0 +1,133 @@
+.reviews {
+  .container();
+
+  position: relative;
+
+  padding-top: 54px;
+  padding-bottom: 36px;
+}
+
+.reviews__title {
+  margin-bottom: 24px;
+}
+
+.reviews__quote {
+  margin: 0;
+  margin-bottom: 27px;
+
+  line-height: 30px;
+}
+
+.reviews__author {
+  display: block;
+  margin-bottom: 6px;
+
+  font-weight: 700;
+  font-style: normal;
+  font-size: 17px;
+  line-height: 24px;
+  color: @black;
+}
+
+.reviews__instagram {
+  margin: 0;
+
+  font-size: 16px;
+  letter-spacing: 0.5px;
+}
+
+.reviews__slider {
+  margin-bottom: 37px;
+}
+
+.reviews__button {
+  width: 100%;
+
+  font-size: 18px;
+}
+
+.slider__wrapper .slider__button--back {
+  border-right: none;
+}
+
+@media (min-width: @tablet-width) {
+  .reviews {
+    padding-top: 77px;
+    padding-bottom: 79px;
+
+    background-image: url("../img/review@1x.jpg");
+    background-repeat: no-repeat;
+    background-position: top left;
+    background-size: 350px 457px;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/review@2x.jpg");
+    }
+  }
+
+  .reviews__title {
+    margin-bottom: 48px;
+  }
+
+  .reviews__quote {
+    margin-bottom: 57px;
+
+    font-size: 17px;
+    line-height: 30px;
+  }
+
+  .reviews__author {
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  .reviews__button {
+    position: absolute;
+    top: 79px;
+    right: 50px;
+
+    width: 175px;
+
+    font-size: 17px;
+  }
+
+  .reviews__slider {
+    position: relative;
+  }
+
+  .slider__wrapper {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+
+    .slider__button {
+      width: 88px;
+
+      border: none;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .reviews {
+    padding-top: 71px;
+    padding-left: 224px;
+    padding-bottom: 130px;
+
+    background-position: top left 50px;
+  }
+
+  .reviews__quote {
+    padding-right: 100px;
+    margin-bottom: 39px;
+  }
+
+  .reviews__author {
+    font-size: 17px;
+    letter-spacing: 0.1px;
+  }
+
+  .reviews__button {
+    top: 79px;
+  }
+}

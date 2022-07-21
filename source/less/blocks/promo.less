@@ -1,0 +1,214 @@
+.promo {
+  padding-top: 70px;
+  padding-bottom: 75px;
+
+  background-color: @light-grey;
+
+  &--toys {
+    position: relative;
+
+    padding-bottom: 328px;
+
+    background-color: @grey-4;
+    background-image: url("../img/hero-mobile@1x.jpg");
+    background-position: center -18px;
+    background-repeat: no-repeat;
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/hero-mobile@2x.jpg");
+      background-size: 575px auto;
+    }
+  }
+}
+
+.promo__container {
+  .container();
+}
+
+.promo__title {
+  text-align: center;
+}
+
+.promo__wrapper {
+  margin: 0 -30px;
+
+  position: absolute;
+  bottom: 0;
+
+  width: 100%;
+  max-width: 1050px;
+
+  overflow: hidden;
+}
+
+.promo__button {
+  position: relative;
+
+  display: block;
+
+  padding: 25px 90px 30px 28px;
+
+  width: 100%;
+
+  font-size: 19px;
+  font-weight: 700;
+  color: @white;
+
+  box-sizing: border-box;
+
+  &:hover,
+  &:focus {
+    .promo__icon {
+      opacity: 0.7;
+    }
+  }
+
+  &:active {
+    .promo__icon {
+      opacity: 0.3;
+    }
+  }
+}
+
+.promo__button--style--1 {
+  background-color: @seafoam-blue;
+
+  .promo__icon {
+    top: 23px;
+    right: 36px;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: @teal;
+  }
+
+  &:active {
+    color: @button-font-active;
+    background-color: @teal;
+  }
+}
+
+.promo__button--style--2 {
+  background-color: @aqua-marine;
+
+  .promo__icon {
+    top: 20px;
+    right: 26px;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: @greeny-blue;
+  }
+
+  &:active {
+    color: @button-font-active;
+    background-color: @greeny-blue;
+  }
+}
+
+.promo__button .promo__icon {
+  position: absolute;
+  opacity: 0.5;
+  fill: @deep-teal;
+
+  pointer-events: none;
+}
+
+@media (min-width: @tablet-width) {
+  .promo {
+    position: relative;
+
+    padding-top: 96px;
+    padding-bottom: 78px;
+
+    &--toys {
+      padding-top: 154px;
+      padding-bottom: 489px;
+
+      background-image: url("../img/hero-tablet@1x.jpg");
+      background-repeat: no-repeat;
+      background-position: center;
+
+      @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+        background-image: url("../img/hero-tablet@2x.jpg");
+        background-size: 1150px auto;
+      }
+    }
+
+    &::after {
+      content: "";
+
+      position: absolute;
+      bottom: -20px;
+      left: 0;
+
+      background-image: url("../img/bg-zigzag-fill.svg");
+      background-repeat: repeat;
+      background-position: 0 0;
+
+      width: 100%;
+      height: 34px;
+    }
+  }
+
+  .promo__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+
+    margin: 0;
+
+    width: calc(100% - 100px);
+  }
+
+  .promo__button {
+    padding: 27px 90px 30px 36px;
+    width: 50%;
+
+    font-size: 20px;
+    line-height: 30px;
+
+    &--style--1 {
+      .promo__icon {
+        top: 30px;
+        right: 36px;
+      }
+    }
+
+    &--style--2 {
+      .promo__icon {
+        top: 32px;
+        right: 34px;
+      }
+    }
+
+    &:hover,
+    &:focus {
+      padding-bottom: 35px;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .promo {
+    padding-top: 93px;
+    padding-bottom: 101px;
+  }
+
+  .promo--toys {
+    padding-top: 154px;
+    padding-bottom: 475px;
+    background-image: url("../img/hero-desktop@1x.jpg");
+
+    @media (min-resolution: @retina-dpi), (min-resolution: @retina-dppx) {
+      background-image: url("../img/hero-desktop@2x.jpg");
+      background-size: 1150px auto;
+    }
+
+    .promo__title {
+      padding: 0 216px;
+    }
+  }
+}

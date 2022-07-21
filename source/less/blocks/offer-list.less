@@ -1,0 +1,23 @@
+.offer-list {
+  .resetList();
+  font-weight: 700;
+}
+
+.offer-list__link {
+  display: block;
+
+  color: @black;
+
+  &[href]:hover,
+  &[href]:focus {
+    color: rgba(0, 0, 0, 0.6);
+  }
+
+  &[href]:active {
+    color: rgba(0, 0, 0, 0.3);
+  }
+}
+
+.offer-list__item:first-child > .offer-list__link {
+  letter-spacing: 0.1px;
+}
